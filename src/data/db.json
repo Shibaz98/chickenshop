@@ -1,0 +1,29 @@
+{
+  "meals": [
+    {
+      "id": 1,
+      "meal": "Naga Burger Meal",
+      "cost": "£5.99",
+      "spice": "Extra hot"
+    },
+    {
+      "id": 2,
+      "meal": "Smash burger meal",
+      "cost": "£10.99",
+      "spice": "Mild"
+    },
+    {
+      "id": 3,
+      "meal": "Wing variety meal",
+      "cost": "£8.99",
+      "spice": "Hot, medium and mild"
+    },
+    {
+      "id": 4,
+      "meal": "Chicken burger meal",
+      "cost": "£3.99",
+      "spice": "Mild"
+    }
+    
+  ]
+}

@@ -7,8 +7,8 @@ export default function Root() {
             <nav>
                 <h1>Chicken-Shop</h1>
                 <NavLink to='/'>Home</NavLink>
-                <NavLink to='/order'>Order</NavLink>
-                <NavLink to='/contact'>Contact</NavLink>
+                <NavLink to='order'>Order</NavLink>
+                <NavLink to='contact'>Contact</NavLink>
             </nav>
         </header>
         <main>
