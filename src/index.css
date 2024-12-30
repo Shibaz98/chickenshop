@@ -58,3 +58,23 @@ img{
   max-width: 100%;
   height: auto;
 }
+
+.meals {
+  max-width: 900px;
+  background-color: #c8c8b4;
+  border: solid 1px black;
+  text-align: center;
+  margin: 20px;
+}
+
+.meals a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin: 30px;
+}
+
+.meals a:hover{
+  color: white;
+  background-color: black;
+} 
