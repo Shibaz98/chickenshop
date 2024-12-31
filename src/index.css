@@ -78,3 +78,20 @@ img{
   color: white;
   background-color: black;
 } 
+
+.meals-description{
+  text-align: center;
+  width: 600px;
+  background-color:#EBEBE5 ;
+  height: 1000px;
+}
+
+.meals-description > *{
+  margin: 20px;
+  font-size: 30px;
+}
+
+.meals-description img{
+  max-width: 80%;
+  height: auto;
+} 

@@ -6,14 +6,14 @@ import { useParams, useLoaderData } from "react-router-dom"
 export default function MealsDescription() {
     
     const descriptionLoader = useLoaderData()
-    let { id } = useParams()
-  
+    console.log(descriptionLoader.image)
     return (
     <div className="meals-description">
         <h1>{descriptionLoader.meal}</h1>
         <p>{descriptionLoader.cost}</p>
-        <p>{descriptionLoader.spice}</p>
+        <p>Spice level: {descriptionLoader.spice}</p>
         <p>{descriptionLoader.description}</p>
+        <img src={descriptionLoader.image} alt="image of a spicy burger"/>
     </div>
   )
 }
