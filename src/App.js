@@ -7,8 +7,33 @@ import Orderlayout from './Components/Order/Orderlayout';
 import Meals from './Components/Meals/Meals';
 import { mealsloader } from './Components/Meals/Meals';
 import MealsDescription, { descriptionloader } from './Components/MealsDescription/MealsDescription';
+import Checkout from './Components/Checkout/Checkout';
+import { useState } from 'react';
 
 function App() {
+
+  const [order, setOrder] = useState([])
+
+  const addToCart = (meal) => { if( order.length < 20) {
+    setOrder([...order, meal]) } else {
+      alert('Please contact restaurant for larger orders above 20 thanks') 
+    }
+  }
+  
+  
+
+  
+
+  // To insert a prop into a elemnent you need to create a wrapper and replace the element with the wrapper
+
+  const MealsDescriptionWrapper = props =>{
+    return <MealsDescription {...props} addToCart={addToCart}/>
+  }
+
+  const CheckoutWrapper = props =>{
+    return <Checkout {...props} order={order}/>
+  }
+  
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -16,8 +41,9 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path='order' element={<Orderlayout/>}>
           <Route index element ={<Meals/>} loader={mealsloader}/>
-          <Route path=':id' loader={descriptionloader} element={<MealsDescription/>}/>
+          <Route path=':id' loader={descriptionloader} element={<MealsDescriptionWrapper/>}/>
         </Route>
+        <Route path='checkout' element={<CheckoutWrapper/>}/>
       </Route>
     )
   )
