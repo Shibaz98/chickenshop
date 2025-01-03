@@ -21,9 +21,6 @@ function App() {
   }
   
   
-
-  
-
   // To insert a prop into a elemnent you need to create a wrapper and replace the element with the wrapper
 
   const MealsDescriptionWrapper = props =>{
