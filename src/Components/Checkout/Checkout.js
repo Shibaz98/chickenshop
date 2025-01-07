@@ -23,9 +23,14 @@ const summary = order.reduce((accumulator, order) => {
   const food = order.meal;
   accumulator[food] = (accumulator[food] || 0) + 1;
   return accumulator;
-}, {});  // this returns an object of the food and the total number of food items, figure out a way to get it to be stored and extracted? not sure yet 
+}, {});  // this returns an object of the food and the total number of food items
 
 console.log(summary); 
+
+
+let orderSummary = Object.entries(summary).map(([food, quantity]) => {
+  return <li key={quantity}>{food} x {quantity}</li>
+}) // Object.entries returns an array of the object, map through the array and return the food and quantity of the food, [food, quantity] is extracting the key value object and then being returned as a list
 
 
 
@@ -33,18 +38,14 @@ console.log(summary);
   return (
     <div className="checkout">
         <h1>Order summary</h1>
-        <ul>
-          {order.map((meal, index) => {
-            return <li key={index}>
-              <h2>{meal.meal}</h2>
-              <p>{meal.cost}</p>
-              <p>Spice level: {meal.spice}</p>
-              <p>{meal.description}</p>
-            </li>
-          })
-          }
-        </ul>
-        <p>{totalCost}</p>
+        
+          {orderSummary}
+        
+        <h3>Order total: £{totalCost.toFixed(2)}</h3>
     </div>
   )
 }
+
+
+
+

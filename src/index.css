@@ -95,3 +95,14 @@ img{
   max-width: 80%;
   height: auto;
 } 
+
+.checkout{
+  text-align: center;
+}
+
+.checkout >  li{
+border: solid 1px black;
+margin: 10px;
+padding: 40px;  
+font-size: 20px;
+}
