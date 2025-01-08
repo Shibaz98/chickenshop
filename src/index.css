@@ -106,3 +106,8 @@ margin: 10px;
 padding: 40px;  
 font-size: 20px;
 }
+
+.checkout > li > button{
+  margin: 10px;
+  font-size: 20px;
+}
