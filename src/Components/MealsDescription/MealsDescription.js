@@ -16,7 +16,7 @@ export default function MealsDescription({addToCart}) {
     return (
     <div className="meals-description">
         <h1>{descriptionLoader.meal}</h1>
-        <p>{descriptionLoader.cost}</p>
+        <p>£{descriptionLoader.cost}</p>
         <p>Spice level: {descriptionLoader.spice}</p>
         <p>{descriptionLoader.description}</p>
         <img src={descriptionLoader.image} alt="image of a spicy burger"/>

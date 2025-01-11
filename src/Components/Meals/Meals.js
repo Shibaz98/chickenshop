@@ -11,7 +11,7 @@ export default function Meals() {
       {meals.map((meal) =>
       <Link to={meal.id} key={meal.id}>
         <h2>{meal.meal}</h2>
-        <p>{meal.cost}</p>
+        <p>£{meal.cost}</p>
         <p>Spice level: {meal.spice}</p>
       </Link>
       )}

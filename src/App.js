@@ -18,7 +18,15 @@ function App() {
     setOrder([...order, meal]) } else {
       alert('Please contact restaurant for larger orders above 20 thanks') 
     }
-  }
+  };
+
+  const removeFromCart = (mealToRemove) => {
+    const indexToRemove = order.findIndex(meal => meal.meal === mealToRemove.meal); 
+    if (indexToRemove !== -1){
+      setOrder(order.filter((_, index) => index !== indexToRemove))
+    }
+  };
+
   
   
   // To insert a prop into a elemnent you need to create a wrapper and replace the element with the wrapper
@@ -28,7 +36,7 @@ function App() {
   }
 
   const CheckoutWrapper = props =>{
-    return <Checkout {...props} order={order}/>
+    return <Checkout {...props} order={order} removeFromCart={removeFromCart}/>
   }
   
 
