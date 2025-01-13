@@ -115,6 +115,24 @@ img{
   padding-bottom: 10px;
   padding-top: 10px;
   list-style: none;
-};
+  margin-bottom: 10px;
+}
+
+.removeButton {
+  background-color: #c8c8b4;
+  color: black;          /* Set text color */
+  padding: 10px 15px;    /* Adjust padding for size */
+  font-size: 16px;       /* Set text size */
+  border: none;          /* Remove default border */
+  border-radius: 5px;    /* Add rounded corners */
+  cursor: pointer;       /* Show pointer on hover */
+}
+
+.removeButton:hover {
+  background-color: darkred; /* Change color on hover */
+  color: white;
+}; 
+
+
 
 

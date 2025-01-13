@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 
-export default function Checkout({order, removeFromCart}) {
+export default function Checkout({order, removeFromCart, orderValue}) {
 
  
   const groupedOrder = order.reduce((acc, meal) => {
@@ -23,6 +24,10 @@ export default function Checkout({order, removeFromCart}) {
 
   console.log(totalCost);
 
+  if (totalCost > 0){
+    orderValue(totalCost);
+  } ; // passes the order total to the app component and saves it in a state 
+
   return (
     <div className="checkout">
         <h1>Order summary</h1>
@@ -30,12 +35,14 @@ export default function Checkout({order, removeFromCart}) {
             {groupedOrder.map((meal, index) =>(
               <li key={index}>
                 <p>{meal.meal} x{meal.quantity} £{meal.individualCost ? meal.individualCost : meal.cost}</p>
-                <button onClick={() => removeFromCart(meal)}>Remove</button>
+                <button className="removeButton" onClick={() => removeFromCart(meal)}>Remove</button>
               </li>
             ))
             }
           </ul>
           <p>Order total: £{totalCost}</p>
+          <Link to='/payment'>Checkout</Link>
+
     </div>
   )
 }

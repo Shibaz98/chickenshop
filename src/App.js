@@ -8,11 +8,13 @@ import Meals from './Components/Meals/Meals';
 import { mealsloader } from './Components/Meals/Meals';
 import MealsDescription, { descriptionloader } from './Components/MealsDescription/MealsDescription';
 import Checkout from './Components/Checkout/Checkout';
+import Payment from './Components/Payment/Payment';
 import { useState } from 'react';
 
 function App() {
 
-  const [order, setOrder] = useState([])
+  const [order, setOrder] = useState([]); 
+  const [totalValue, setTotalValue] = useState(0); 
 
   const addToCart = (meal) => { if( order.length < 20) {
     setOrder([...order, meal]) } else {
@@ -27,6 +29,11 @@ function App() {
     }
   };
 
+  const orderValue = (cost) =>{
+   setTotalValue(cost)
+  }; // gets order total from the checkout component 
+
+
   
   
   // To insert a prop into a elemnent you need to create a wrapper and replace the element with the wrapper
@@ -36,7 +43,7 @@ function App() {
   }
 
   const CheckoutWrapper = props =>{
-    return <Checkout {...props} order={order} removeFromCart={removeFromCart}/>
+    return <Checkout {...props} order={order} removeFromCart={removeFromCart} orderValue={orderValue}/>
   }
   
 
@@ -49,6 +56,7 @@ function App() {
           <Route path=':id' loader={descriptionloader} element={<MealsDescriptionWrapper/>}/>
         </Route>
         <Route path='checkout' element={<CheckoutWrapper/>}/>
+        <Route path='payment' element={<Payment/>}/>
       </Route>
     )
   )
