@@ -8,8 +8,8 @@ export default function Meals() {
   return (
     <div className="meals">
       <h1>Choose a preset meal!</h1>
-      {meals.map((meal) =>
-      <Link to={meal.id} key={meal.id}>
+      {meals.map((meal, index) =>
+      <Link to={meal.id} key={index}>
         <h2>{meal.meal}</h2>
         <p>£{meal.cost}</p>
         <p>Spice level: {meal.spice}</p>

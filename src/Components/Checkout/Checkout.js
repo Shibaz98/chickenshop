@@ -16,7 +16,12 @@ export default function Checkout({order, removeFromCart}) {
 
   // hooray everything works 
 
-  
+  const totalCost = groupedOrder.reduce((acc, meal) =>{
+    const wholeNumber = parseFloat(meal.individualCost); // converts strings to number 
+    return acc + wholeNumber; // adds the total cost of the order
+  }, 0) // 0 is the starting point of the total cost
+
+  console.log(totalCost);
 
   return (
     <div className="checkout">
@@ -30,6 +35,7 @@ export default function Checkout({order, removeFromCart}) {
             ))
             }
           </ul>
+          <p>Order total: £{totalCost}</p>
     </div>
   )
 }

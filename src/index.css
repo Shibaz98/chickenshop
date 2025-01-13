@@ -100,14 +100,21 @@ img{
   text-align: center;
 }
 
-.checkout >  li{
-border: solid 1px black;
-margin: 10px;
-padding: 40px;  
-font-size: 20px;
+.checkout > p {
+  font-size: 25px;
 }
 
-.checkout > li > button{
-  margin: 10px;
-  font-size: 20px;
+.checkout > ul > li > p {
+  font-size: 25px;
 }
+
+.checkout > ul > li {
+  border: solid 1px black;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  list-style: none;
+};
+
+
