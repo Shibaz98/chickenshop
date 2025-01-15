@@ -46,6 +46,10 @@ function App() {
     return <Checkout {...props} order={order} removeFromCart={removeFromCart} orderValue={orderValue}/>
   }
   
+  const PaymentWrapper = props =>{
+    return <Payment {...props} totalValue={totalValue}/>
+  }
+
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -56,7 +60,7 @@ function App() {
           <Route path=':id' loader={descriptionloader} element={<MealsDescriptionWrapper/>}/>
         </Route>
         <Route path='checkout' element={<CheckoutWrapper/>}/>
-        <Route path='payment' element={<Payment/>}/>
+        <Route path='payment' element={<PaymentWrapper/>}/>
       </Route>
     )
   )

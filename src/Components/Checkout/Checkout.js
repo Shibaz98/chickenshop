@@ -41,7 +41,7 @@ export default function Checkout({order, removeFromCart, orderValue}) {
             }
           </ul>
           <p>Order total: £{totalCost}</p>
-          <Link to='/payment'>Checkout</Link>
+          <Link to='/payment' className="checkout-link">Checkout</Link>
 
     </div>
   )

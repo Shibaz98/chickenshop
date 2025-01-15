@@ -131,7 +131,67 @@ img{
 .removeButton:hover {
   background-color: darkred; /* Change color on hover */
   color: white;
-}; 
+}
+
+.checkout-link{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin: 30px;
+  background-color: #c8c8b4;
+  padding: 10px 15px;    /* Adjust padding for size */
+  font-size: 16px;       /* Set text size */
+  border: none;          /* Remove default border */
+  border-radius: 5px;    /* Add rounded corners */
+  cursor: pointer;       /* Show pointer on hover */
+}
+
+.checkout-link:hover{
+  background-color: black;
+  color: white;
+}
+
+.payment-layout{
+  text-align: center;
+}
+
+.payment-layout > form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-layout > form > input{
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  font-size: ;
+}
+
+.payment-layout > form > label{
+  font-size: 20px;
+}
+
+
+.payment-layout > form > button{
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  background-color: #c8c8b4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+} 
+
+.payment-layout > form > button:hover{
+  background-color: black;
+  color: white;
+}
+
+
+
 
 
 
