@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Checkout({order, removeFromCart, orderValue}) {
+export default function Checkout({order, removeFromCart, orderValue, addToCart}) {
 
  
   const groupedOrder = order.reduce((acc, meal) => {
@@ -27,6 +27,8 @@ export default function Checkout({order, removeFromCart, orderValue}) {
   if (totalCost > 0){
     orderValue(totalCost);
   } ; // passes the order total to the app component and saves it in a state 
+
+  
 
   return (
     <div className="checkout">

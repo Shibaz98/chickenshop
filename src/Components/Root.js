@@ -6,10 +6,10 @@ export default function Root() {
         <header>
             <nav>
                 <h1>Chicken-Shop</h1>
-                <NavLink to='/'>Home</NavLink>
-                <NavLink to='order'>Order</NavLink>
-                <NavLink to='checkout'>Checkout</NavLink>
-                <NavLink to='contact'>Contact</NavLink>
+                <NavLink to='/' className={({isActive}) => (isActive ? 'active' : '')}>Home</NavLink>
+                <NavLink to='order' className={({isActive}) => (isActive ? 'active' : '')}>Order</NavLink>
+                <NavLink to='checkout' className={({isActive}) => (isActive ? 'active' : '')}>Checkout</NavLink>
+                <NavLink to='contact' className={({isActive}) => (isActive ? 'active' : '')}>Contact</NavLink>
             </nav>
         </header>
         <main>

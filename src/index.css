@@ -80,6 +80,10 @@ img{
 } 
 
 .meals-description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 600px;
   background-color:#EBEBE5 ;
@@ -94,9 +98,14 @@ img{
 .meals-description img{
   max-width: 80%;
   height: auto;
+  margin-bottom: 10px;
 } 
 
 .checkout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -106,6 +115,7 @@ img{
 
 .checkout > ul > li > p {
   font-size: 25px;
+  text-align: center;
 }
 
 .checkout > ul > li {
@@ -116,6 +126,7 @@ img{
   padding-top: 10px;
   list-style: none;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .removeButton {
@@ -190,7 +201,15 @@ img{
   color: white;
 }
 
+.contact-layout{
+  text-align: center;
+  font-size: large;
+}
 
+.active{
+  color: white;
+  border-bottom: solid 5px black;
+}
 
 
 

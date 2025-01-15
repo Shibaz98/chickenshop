@@ -9,6 +9,7 @@ import { mealsloader } from './Components/Meals/Meals';
 import MealsDescription, { descriptionloader } from './Components/MealsDescription/MealsDescription';
 import Checkout from './Components/Checkout/Checkout';
 import Payment from './Components/Payment/Payment';
+import Contact from './Components/Contact/Contact';
 import { useState } from 'react';
 
 function App() {
@@ -43,7 +44,7 @@ function App() {
   }
 
   const CheckoutWrapper = props =>{
-    return <Checkout {...props} order={order} removeFromCart={removeFromCart} orderValue={orderValue}/>
+    return <Checkout {...props} order={order} removeFromCart={removeFromCart} orderValue={orderValue} addToCart={addToCart}/>
   }
   
   const PaymentWrapper = props =>{
@@ -61,6 +62,8 @@ function App() {
         </Route>
         <Route path='checkout' element={<CheckoutWrapper/>}/>
         <Route path='payment' element={<PaymentWrapper/>}/>
+        <Route path='contact' element={<Contact/>}/>
+        <Route path='*' element={<h2>oopsie woopsie there appears to be a fucky wucky in the code or more likely this link doesnt exist</h2>}/>
       </Route>
     )
   )
